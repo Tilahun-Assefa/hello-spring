@@ -16,6 +16,13 @@ public class HelloController {
         return "Hello, "+ coder + "!";
     }
 
+    // responds to get requests at "/hello/LaunchCode"
+    @GetMapping("hello/{name}")
+    @ResponseBody
+    public String helloAgain(@PathVariable String name) {
+        return "Hello, "+ name + "!";
+    }
+
     // responds to get requests at "/goodbye"
     @GetMapping("goodbye")
     @ResponseBody
